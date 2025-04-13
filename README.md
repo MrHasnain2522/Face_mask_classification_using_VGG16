@@ -30,22 +30,7 @@ Before feeding images into the model, they undergo the following preprocessing s
   - Augmentation (rotation, zoom, horizontal flip)
 - One-hot encoding for labels (binary classification)
 
-Example:
-```python
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
-train_gen = ImageDataGenerator(
-    rescale=1./255,
-    rotation_range=20,
-    zoom_range=0.2,
-    horizontal_flip=True
-)
-train_data = train_gen.flow_from_directory(
-    'dataset/train',
-    target_size=(256, 256),
-    class_mode='binary',
-    batch_size=32
-)
 
 
 ##  🧠 Model Architecture:
